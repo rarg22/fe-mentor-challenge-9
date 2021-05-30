@@ -1,0 +1,228 @@
+:root {
+  --primary-bg-color: #ff7979;
+  --primary-btn-color: #38cc8b;
+  --secondary-btn-color: #5e54a4;
+  --primary-btn-text-color: #ffffff;
+  --primary-text-color: #ffffff;
+  --primary-form-text-color: #3d3b48;
+  --primary-form-bg-color: #ffffff;
+}
+
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-text-color);
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+
+.page_container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary-bg-color);
+  background-image: url("images/bg-intro-mobile.png");
+  background-repeat: repeat;
+}
+
+.main_container {
+  height: 100%;
+  width: 100%;
+  padding: 0rem 1.5rem;
+}
+
+.intro {
+  margin-top: 5.5rem;
+  text-align: center;
+}
+
+.intro > h1 {
+  font-size: 1.75rem;
+}
+
+.intro > p {
+  font-size: 1rem;
+  margin-bottom: 4rem;
+}
+
+.try_for_free_card {
+  min-width: 85%;
+  text-align: center;
+  border-radius: 10px;
+  background: var(--secondary-btn-color);
+  margin-bottom: 1.5rem;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+}
+
+.try_for_free_card > p {
+  padding: 1rem 4.1rem;
+  margin: 0rem;
+}
+
+.registration_form {
+  min-width: 85%;
+  padding: 1.5rem 1.5rem;
+  margin-bottom: 4.25rem;
+  border-radius: 10px;
+  box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
+  background: var(--primary-form-bg-color);
+}
+
+.registration_form_input {
+  min-width: 100%;
+  margin-bottom: 1.7rem;
+  height: 3.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.registration_form_input > input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  padding: 0rem 1rem;
+  border-style: none;
+  outline: 1px solid #dedede;
+  border-radius: 5px;
+}
+
+.input_error:before {
+  position: absolute;
+  content: "";
+  top: 25%;
+  right: 10%;
+  height: 24px;
+  width: 24px;
+  background-image: url("images/icon-error.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 99999;
+}
+
+.registration_form_input > input::placeholder {
+  letter-spacing: 1.5px;
+  font-weight: bold;
+}
+
+.registration_form_input > label {
+  display: none;
+}
+
+.registration_form_input > input[type="submit"] {
+  text-transform: uppercase;
+  border-style: none;
+  outline: none;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  color: var(--primary-btn-text-color);
+  background: var(--primary-btn-color);
+}
+
+.registration_form > p {
+  color: #bab7d4;
+  text-align: center;
+  padding: 0rem 0.8rem;
+  margin: 0rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+
+.registration_form > p > a {
+  color: #ff7979;
+  font-weight: bold;
+}
+
+.input_error > input {
+  border-radius: 5px;
+  outline: 1px solid #ff7979;
+}
+
+.input_error > label {
+  width: 100%;
+  display: inline-block;
+  font-size: 0.6rem;
+  text-align: right;
+  color: #ff7979;
+}
+
+.input_error > input::placeholder {
+  color: #ff7979;
+}
+
+@media all and (min-width: 900px) {
+  .page_container {
+    align-items: center;
+  }
+
+  .main_container {
+    display: flex;
+    padding: 0px;
+    max-width: 1440px;
+    background-image: url("images/bg-intro-desktop.png");
+  }
+
+  .intro {
+    flex: 0 0 50%;
+    box-sizing: border-box;
+  }
+
+  .intro > h1 {
+    width: 75%;
+    text-align: left;
+    margin-top: 5rem;
+    margin-left: 10rem;
+    line-height: 3.1rem;
+    font-size: 3.1rem;
+  }
+
+  .intro > p {
+    width: 75%;
+    text-align: left;
+    margin-left: 10rem;
+    line-height: 1.6rem;
+  }
+
+  .registration {
+    flex: 1;
+    margin-left: 4rem;
+  }
+
+  .try_for_free_card {
+    min-width: 0%;
+    max-width: 75%;
+  }
+
+  .registration_form {
+    min-width: 0%;
+    max-width: 75%;
+    box-sizing: border-box;
+  }
+}
+
+@media all and (min-width: 1150px){
+    .registration {
+        margin-left: 2rem;
+      }
+}
+
+
+@media all and (min-width: 1440px){
+    .registration {
+        margin-left: 0rem;
+      }
+}
+
+
